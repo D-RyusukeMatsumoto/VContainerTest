@@ -5,9 +5,11 @@ using VContainer;
 
 public class TestObject : MonoBehaviour
 {
+    [Inject]
     private HelloWorldService helloWorldService;
 
 
+/*
     // コンテナから取得.
     [Inject]
     public void Construct(HelloWorldService _helloWorldService)
@@ -15,13 +17,14 @@ public class TestObject : MonoBehaviour
         Debug.Log("Inject");
         helloWorldService = _helloWorldService;
     }
+*/
 
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            helloWorldService.HelloWorld();
+            helloWorldService.HelloWorld("TestObject");
         }
     }
 }

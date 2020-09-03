@@ -3,9 +3,10 @@
 public class HelloWorldService
 {
 
-    public void HelloWorld()
+    public void HelloWorld(
+        string text)
     {
-        Debug.Log("HelloWorld");
+        Debug.Log($"{text} : HelloWorld");
     }
 
 }
